@@ -1,0 +1,32 @@
+version: '3.3'
+
+networks: 
+  ntalphash:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/24
+
+services:
+  mysql:
+    build:
+      context: .
+    image: mysql:5.7.24
+    restart: unless-stopped
+    container_name: mysqlTimeSheet
+    volumes: 
+      - data-volume:/var/lib/mysqlTimeSheet
+    networks: 
+        ntalphash:
+          ipv4_address: 172.20.0.2
+    ports:
+      - target: 3306
+        published: 3390
+        protocol: tcp
+        mode: host
+    environment:
+      - MYSQL_ROOT_PASSWORD=123Stella
+
+volumes:
+  data-volume:
