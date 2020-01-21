@@ -19,7 +19,7 @@ services:
       - data-volume:/var/lib/mysql
     networks: 
         ntalphash:
-          ipv4_address: 172.20.0.2
+          ipv4_address: 172.20.0.3
     ports:
       - target: 3306
         published: 3391
