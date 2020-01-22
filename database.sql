@@ -3,35 +3,52 @@ USE Employees_Management;
 
 DROP TABLE IF EXISTS nazioni;
 CREATE TABLE nazioni (
-  iso varchar(2) NOT NULL PRIMARY KEY,
-  descrizione varchar(30) NOT NULL
+  iso char(2) primary key,
+  descrizione varchar(30) not null
 );
-
-DROP TABLE IF EXISTS dipendenti;
-CREATE TABLE dipendenti (
-  id int NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-  nome varchar(20) NOT NULL,
-  cognome varchar(30) NOT NULL,
-  telefonO int(12) NOT NULL,
-  codiceFiscale varchar(16) NOT NULL,
-  sesso char(1) NOT NULL,
-  email varchar(60) DEFAULT NULL,
-FOREIGN KEY (iso) REFERENCES nazioni (iso));
-
 
 DROP TABLE IF EXISTS regioni;
 CREATE TABLE regioni (
-  descrizione_reg varchar(30) NOT NULL PRIMARY KEY,
-FOREIGN KEY (iso) REFERENCES nazioni (iso));
+  id integer primary key auto_increment,
+  descrizione varchar(30),
+  iso_nazione char(2),
+  FOREIGN KEY (iso_nazione) REFERENCES nazioni(iso)
+);
 
 DROP TABLE IF EXISTS province;
 CREATE TABLE province (
-  id_prov varchar(2) NOT NULL PRIMARY KEY,
-  descrizione_prov varchar(30) NOT NULL,
-FOREIGN KEY (descrizione_reg) REFERENCES regioni (descrizione_reg));
+  id char(2) primary key,
+  descrizione varchar(30),
+  id_regione integer,
+  FOREIGN KEY (id_regione) REFERENCES regioni(id)
+);
 
 DROP TABLE IF EXISTS citta;
 CREATE TABLE citta (
-  id_citta int(20) NOT NULL  PRIMARY KEY,
-  descrizione_citta varchar(50) NOT NULL,
- FOREIGN KEY (descrizione_prov) REFERENCES province (descrizione_prov));
+  id integer primary key auto_increment,
+  descrizione varchar(40),
+  id_provincia char(2),
+  FOREIGN KEY (id_provincia) REFERENCES province(id)
+);
+
+
+DROP TABLE IF EXISTS dipendenti;
+CREATE TABLE dipendenti(
+  nome varchar(20) not null,
+  cognome varchar(20) not null,
+  taxCode char(16) not null,
+  indirizzo varchar(40),
+  sesso char(1),
+  email varchar(20),
+  telefono varchar(20),
+  id integer primary key auto_increment,
+  iso_nazione char(2),
+  id_regione integer,
+  id_provincia char(2),
+  id_citta integer,
+  FOREIGN KEY (iso_nazione) REFERENCES nazioni(iso),
+  FOREIGN KEY (id_regione) REFERENCES regioni(id),
+  FOREIGN KEY (id_provincia) REFERENCES province(id),
+  FOREIGN KEY (id_citta) REFERENCES citta(id)
+
+);
