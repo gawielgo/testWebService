@@ -22,7 +22,7 @@ services:
           ipv4_address: 172.20.0.3
     ports:
       - target: 3306
-        published: 3394
+        published: 3397
         protocol: tcp
         mode: host
     environment:

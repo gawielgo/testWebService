@@ -6,9 +6,7 @@ CREATE TABLE nazioni (
   iso char(2) primary key,
   descrizione varchar(30) not null
 );
-INSERT INTO nazioni VALUES ('IT', 'Italia');
-INSERT INTO nazioni VALUES ('FR', 'Francia');
-INSERT INTO nazioni VALUES ('SP', 'Spagna');
+
 
 DROP TABLE IF EXISTS regioni;
 CREATE TABLE regioni (
@@ -17,9 +15,7 @@ CREATE TABLE regioni (
   iso_nazione char(2),
   FOREIGN KEY (iso_nazione) REFERENCES nazioni(iso)
 );
-INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Lombardia', 'IT');
-INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Veneto', 'IT');
-INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Sardegna', 'IT');
+
 
 DROP TABLE IF EXISTS province;
 CREATE TABLE province (
@@ -28,9 +24,7 @@ CREATE TABLE province (
   id_regione integer,
   FOREIGN KEY (id_regione) REFERENCES regioni(id)
 );
-INSERT INTO province VALUES ('PD', 'Padova', '2');
-INSERT INTO province VALUES ('VI', 'Vicenza', '2');
-INSERT INTO province VALUES ('VR', 'Verona', '2');
+
 
 DROP TABLE IF EXISTS citta;
 CREATE TABLE citta (
@@ -39,9 +33,7 @@ CREATE TABLE citta (
   id_provincia char(2),
   FOREIGN KEY (id_provincia) REFERENCES province(id)
 );
-INSERT INTO citta (descrizione, id_provincia) VALUES ('Padova', '1');
-INSERT INTO citta (descrizione, id_provincia) VALUES ('Camposampiero', '1');
-INSERT INTO citta (descrizione, id_provincia) VALUES ('Cittadella', '1');
+
 
 
 DROP TABLE IF EXISTS dipendenti;
@@ -63,6 +55,18 @@ CREATE TABLE dipendenti(
   FOREIGN KEY (id_provincia) REFERENCES province(id),
   FOREIGN KEY (id_citta) REFERENCES citta(id)
 );
+INSERT INTO nazioni VALUES ('IT', 'Italia');
+INSERT INTO nazioni VALUES ('FR', 'Francia');
+INSERT INTO nazioni VALUES ('SP', 'Spagna');
+INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Lombardia', 'IT');
+INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Veneto', 'IT');
+INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Sardegna', 'IT');
+INSERT INTO province VALUES ('PD', 'Padova', '2');
+INSERT INTO province VALUES ('VI', 'Vicenza', '2');
+INSERT INTO province VALUES ('VR', 'Verona', '2');
+INSERT INTO citta (descrizione, id_provincia) VALUES ('Padova', '1');
+INSERT INTO citta (descrizione, id_provincia) VALUES ('Camposampiero', '1');
+INSERT INTO citta (descrizione, id_provincia) VALUES ('Cittadella', '1');
 INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
 VALUES ('Gigi','Rossi', 'GRSCFKDJEI293ODJ', 'via delle rose, 80', 'M', 'gigi.rossi@gmail.com', '+39 3304859286', 'IT', '2', 'PD', '1');
 INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
