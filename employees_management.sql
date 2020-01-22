@@ -50,5 +50,29 @@ CREATE TABLE dipendenti(
   FOREIGN KEY (id_regione) REFERENCES regioni(id),
   FOREIGN KEY (id_provincia) REFERENCES province(id),
   FOREIGN KEY (id_citta) REFERENCES citta(id)
-
+  
+  INSERT INTO nazioni VALUES ('IT', 'Italia');
+INSERT INTO nazioni VALUES ('FR', 'Francia');
+INSERT INTO nazioni VALUES ('SP', 'Spagna');
+INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Piemonte', 'IT');
+INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Veneto', 'IT');
+INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Campania', 'IT');
+INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Lizza', 'FR');
+INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Parigi', 'FR');
+INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Nizza', 'FR');
+INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Ibiza', 'SP');
+INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Barcellona', 'SP');
+INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Madrid', 'SP');
+INSERT INTO province VALUES ('PD', 'Padova', '2');
+INSERT INTO province VALUES ('MI', 'Milano', '1');
+INSERT INTO province VALUES ('VR', 'Verona', '2');
+INSERT INTO citta (descrizione, id_provincia) VALUES ('Padova', '1');
+INSERT INTO citta (descrizione, id_provincia) VALUES ('Due Carrare', '1');
+INSERT INTO citta (descrizione, id_provincia) VALUES ('Este', '1');
+INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
+VALUES ('Stefano','Zogno', 'ZGNSFNO00VOLEVI', 'via del rosetto, 180', 'M', 'stefano.zogno@gmail.com', '+39 3491111111', 'IT', '2', 'PD', '1');
+INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
+VALUES ('Mario','Verdura', 'MRRVRD00ADIJD', 'via delle seggiole, 99', 'M', 'mario.verdura@gmail.com', '+39 84891919', 'IT', '2', 'PD', '3');
+INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
+VALUES ('Maria','Venier', 'MRRVNR00DDAHI', 'via brogei, 5', 'F', 'maria.venier@gmail.com', '+39 394199819', 'IT', '2', 'PD', '2');
 );
