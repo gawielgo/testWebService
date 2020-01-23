@@ -72,10 +72,10 @@ INSERT INTO province VALUES ('VR', 'Tarragona', '8');
 INSERT INTO citta (descrizione, id_provincia) VALUES ('Padova', 'PD');
 INSERT INTO citta (descrizione, id_provincia) VALUES ('Due Carrare', 'PD');
 INSERT INTO citta (descrizione, id_provincia) VALUES ('Este', 'PD');
-INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
-VALUES ('Stefano','Zogno', 'ZGNSFNO00VOLEVI', 'via del rosetto, 180', 'M', 'stefano.zogno@gmail.com', '+39 3491111111', 'IT', '2', 'PD', '1');
-INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
-VALUES ('Mario','Verdura', 'MRRVRD00ADIJD', 'via delle seggiole, 99', 'M', 'mario.verdura@gmail.com', '+39 84891919', 'IT', '2', 'PD', '3');
-INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
-VALUES ('Maria','Venier', 'MRRVNR00DDAHI', 'via brogei, 5', 'F', 'maria.venier@gmail.com', '+39 394199819', 'IT', '2', 'PD', '2');
+INSERT INTO dipendenti (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
+VALUES ('Stefano','Zogno', 'ZGNSFNO00VOLEVI', 'via del rosetto, 180', 'M', 'stefagno@gmail.com', '+39 3491111111', 'IT', '2', 'PD', '1');
+INSERT INTO dipendenti (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
+VALUES ('Mario','Verdura', 'MRRVRD00ADIJD', 'via delle seggiole, 99', 'M', 'mariodura@gmail.com', '+39 84891919', 'IT', '2', 'PD', '1');
+INSERT INTO dipendenti (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
+VALUES ('Maria','Venier', 'MRRVNR00DDAHI', 'via brogei, 5', 'F', 'marienier@gmail.com', '+39 394199819', 'IT', '2', 'PD', '1');
 );
