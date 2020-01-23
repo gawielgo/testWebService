@@ -69,9 +69,9 @@ INSERT INTO province VALUES ('VR', 'Verona', '2');
 INSERT INTO province VALUES ('BC', 'Barcellona', '8');
 INSERT INTO province VALUES ('MI', 'Girona', '8');
 INSERT INTO province VALUES ('VR', 'Tarragona', '8');
-INSERT INTO citta (descrizione, id_provincia) VALUES ('Padova', '1');
-INSERT INTO citta (descrizione, id_provincia) VALUES ('Due Carrare', '1');
-INSERT INTO citta (descrizione, id_provincia) VALUES ('Este', '1');
+INSERT INTO citta (descrizione, id_provincia) VALUES ('Padova', 'PD');
+INSERT INTO citta (descrizione, id_provincia) VALUES ('Due Carrare', 'PD');
+INSERT INTO citta (descrizione, id_provincia) VALUES ('Este', 'PD');
 INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
 VALUES ('Stefano','Zogno', 'ZGNSFNO00VOLEVI', 'via del rosetto, 180', 'M', 'stefano.zogno@gmail.com', '+39 3491111111', 'IT', '2', 'PD', '1');
 INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
