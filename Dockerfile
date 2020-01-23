@@ -7,4 +7,4 @@ ENV MYSQL_DATABASE Employees_Management
 
 ADD database.sql /docker-entrypoint-initdb.d
 
-EXPOSE 3397
+EXPOSE 3399

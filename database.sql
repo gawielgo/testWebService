@@ -64,12 +64,12 @@ INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Sardegna', 'IT');
 INSERT INTO province VALUES ('PD', 'Padova', '2');
 INSERT INTO province VALUES ('VI', 'Vicenza', '2');
 INSERT INTO province VALUES ('VR', 'Verona', '2');
-INSERT INTO citta (descrizione, id_provincia) VALUES ('Padova', '1');
-INSERT INTO citta (descrizione, id_provincia) VALUES ('Camposampiero', '1');
-INSERT INTO citta (descrizione, id_provincia) VALUES ('Cittadella', '1');
-INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
+INSERT INTO citta (descrizione, id_provincia) VALUES ('Fontaniva', 'PD');
+INSERT INTO citta (descrizione, id_provincia) VALUES ('Camposampiero', 'PD');
+INSERT INTO citta (descrizione, id_provincia) VALUES ('Cittadella', 'PD');
+INSERT INTO dipendenti (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
 VALUES ('Gigi','Rossi', 'GRSCFKDJEI293ODJ', 'via delle rose, 80', 'M', 'gigi.rossi@gmail.com', '+39 3304859286', 'IT', '2', 'PD', '1');
-INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
+INSERT INTO dipendenti (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
 VALUES ('Mario','Verdi', 'GRSCFKDJEI293ODJ', 'via delle fontane, 50', 'M', 'mario.verdi@gmail.com', '+39 3659874521', 'IT', '2', 'PD', '3');
-INSERT INTO citta (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
+INSERT INTO dipendenti (nome, cognome, taxCode, indirizzo, sesso, email, telefono, iso_nazione, id_regione, id_provincia, id_citta) 
 VALUES ('Maria','Bianchi', 'GRSCFKDJEI293ODJ', 'via roma, 5', 'F', 'maria.bianchi@gmail.com', '+39 9631548654', 'IT', '2', 'PD', '2');
