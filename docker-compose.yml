@@ -19,14 +19,14 @@ services:
       - data-volume:/var/lib/mysql
     networks: 
         ntalphash:
-          ipv4_address: 172.20.0.3
+          ipv4_address: 172.20.0.2
     ports:
       - target: 3306
-        published: 3399
+        published: 3390
         protocol: tcp
         mode: host
     environment:
       - MYSQL_ROOT_PASSWORD=123Stella
 
 volumes:
- data-volume: 
+  data-volume:
