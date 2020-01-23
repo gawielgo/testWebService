@@ -49,7 +49,7 @@ CREATE TABLE dipendenti(
   FOREIGN KEY (iso_nazione) REFERENCES nazioni(iso),
   FOREIGN KEY (id_regione) REFERENCES regioni(id),
   FOREIGN KEY (id_provincia) REFERENCES province(id),
-  FOREIGN KEY (id_citta) REFERENCES citta(id)
+  FOREIGN KEY (id_citta) REFERENCES citta(id));
   
 INSERT INTO nazioni VALUES ('IT', 'Italia');
 INSERT INTO nazioni VALUES ('FR', 'Francia');
