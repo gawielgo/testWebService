@@ -51,7 +51,7 @@ CREATE TABLE dipendenti(
   FOREIGN KEY (id_provincia) REFERENCES province(id),
   FOREIGN KEY (id_citta) REFERENCES citta(id)
   
-  INSERT INTO nazioni VALUES ('IT', 'Italia');
+INSERT INTO nazioni VALUES ('IT', 'Italia');
 INSERT INTO nazioni VALUES ('FR', 'Francia');
 INSERT INTO nazioni VALUES ('SP', 'Spagna');
 INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Piemonte', 'IT');
@@ -66,6 +66,9 @@ INSERT INTO regioni (descrizione, iso_nazione) VALUES ('Madrid', 'SP');
 INSERT INTO province VALUES ('PD', 'Padova', '2');
 INSERT INTO province VALUES ('MI', 'Milano', '1');
 INSERT INTO province VALUES ('VR', 'Verona', '2');
+INSERT INTO province VALUES ('BC', 'Barcellona', '8');
+INSERT INTO province VALUES ('MI', 'Girona', '8');
+INSERT INTO province VALUES ('VR', 'Tarragona', '8');
 INSERT INTO citta (descrizione, id_provincia) VALUES ('Padova', '1');
 INSERT INTO citta (descrizione, id_provincia) VALUES ('Due Carrare', '1');
 INSERT INTO citta (descrizione, id_provincia) VALUES ('Este', '1');
