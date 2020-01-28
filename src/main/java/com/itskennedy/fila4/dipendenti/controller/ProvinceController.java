@@ -11,12 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.itskennedy.fila4.dipendenti.dao.NazioniDao;
 import com.itskennedy.fila4.dipendenti.dao.ProvinceDao;
 import com.itskennedy.fila4.dipendenti.dto.BaseResponseDto;
-import com.itskennedy.fila4.dipendenti.dto.NazioniDto;
 import com.itskennedy.fila4.dipendenti.dto.ProvinceDto;
-import com.itskennedy.fila4.dipendenti.services.NazioniService;
 import com.itskennedy.fila4.dipendenti.services.ProvinceService;
 
 @RestController

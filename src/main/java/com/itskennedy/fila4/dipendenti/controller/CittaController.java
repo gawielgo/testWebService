@@ -12,12 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.itskennedy.fila4.dipendenti.dao.CittaDao;
-import com.itskennedy.fila4.dipendenti.dao.NazioniDao;
 import com.itskennedy.fila4.dipendenti.dto.BaseResponseDto;
 import com.itskennedy.fila4.dipendenti.dto.CittaDto;
-import com.itskennedy.fila4.dipendenti.dto.NazioniDto;
 import com.itskennedy.fila4.dipendenti.services.CittaService;
-import com.itskennedy.fila4.dipendenti.services.NazioniService;
 
 @RestController
 @RequestMapping(value = "api/citta")
