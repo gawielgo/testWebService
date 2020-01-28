@@ -110,7 +110,7 @@ insert into regioni values(null, 'Tirolo', 'AT');
 insert into regioni values(null, 'Voralberg', 'AT');
 insert into regioni values(null, 'Ontario', 'CA');
 insert into regioni values(null, 'Alberta', 'CA');
-insert into regioni values(null, 'Québec', 'CA');
+insert into regioni values(null, 'Quebec', 'CA');
 insert into regioni values(null, 'Labrador', 'CA');
 
 insert into province values('PD', 'Padova', 1);
