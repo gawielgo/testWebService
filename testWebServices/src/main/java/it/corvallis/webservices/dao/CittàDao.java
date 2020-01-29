@@ -10,14 +10,14 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "nazioni")
+@Table(name = "citta")
 @Data
 
-public class NazioniDao implements Serializable{
+public class CittàDao implements Serializable{
 
 	@Id
-	@Column(name = "iso")
-	private String iso;
+	@Column(name = "id")
+	private Long id;
 	
 	@Column(name = "descrizione")
 	private String descrizione;

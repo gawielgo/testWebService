@@ -1,4 +1,5 @@
 package it.corvallis.webservices.dto;
+
 import java.util.List;
 
 import it.corvallis.webservices.dao.DipendentiDao;
@@ -7,13 +8,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Builder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class DipendentiDto {
 
-	public List<DipendentiDao> dipendentiData;
+	private List<DipendentiDao> dipendentiData;
 	
 }

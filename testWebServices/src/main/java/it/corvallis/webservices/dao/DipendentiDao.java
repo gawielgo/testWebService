@@ -9,12 +9,11 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
-
 @Entity
-@Table(name="dipendenti")
+@Table(name = "dipendenti")
 @Data
-public class DipendentiDao implements Serializable {
-	private static final long serialVersionUID = 1L;
+
+public class DipendentiDao implements Serializable{
 
 	@Id
 	@Column(name = "id")
@@ -31,4 +30,5 @@ public class DipendentiDao implements Serializable {
 	
 	@Column(name = "telefono")
 	private String telefono;
+	
 }

@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 import it.corvallis.webservices.dao.NazioniDao;
 
 @Repository
-public interface NazioniRepository extends JpaRepository<NazioniDao, Long>
-{
-	
+public interface NazioniRepository extends JpaRepository<NazioniDao, Long>{
+
 }

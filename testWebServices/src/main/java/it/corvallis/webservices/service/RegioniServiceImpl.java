@@ -1,4 +1,5 @@
 package it.corvallis.webservices.service;
+
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -9,16 +10,16 @@ import org.springframework.stereotype.Service;
 import it.corvallis.webservices.dao.RegioniDao;
 import it.corvallis.webservices.repository.RegioniRepository;
 
-
 @Service
 @Transactional
-public class RegioniServiceImpl  implements RegioniService{
-	
+public class RegioniServiceImpl implements RegioniService{
+
 	@Autowired
 	RegioniRepository regioniRepository;
 	
 	@Override
-	public List<RegioniDao> SelTutti(){
+	public List<RegioniDao> SelReg() {
 		return regioniRepository.findAll();
 	}
+
 }

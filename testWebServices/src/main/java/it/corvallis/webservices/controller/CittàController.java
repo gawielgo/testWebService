@@ -11,41 +11,41 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import it.corvallis.webservices.dao.RegioniDao;
+import it.corvallis.webservices.dao.CittàDao;
 import it.corvallis.webservices.dto.BaseResponseDto;
-import it.corvallis.webservices.dto.RegioniDto;
-import it.corvallis.webservices.service.RegioniService;
+import it.corvallis.webservices.dto.CittàDto;
+import it.corvallis.webservices.service.CittàService;
 
 @RestController
-@RequestMapping(value = "api/regioni")
-public class RegioniController {
-
-private static final Logger logger = LoggerFactory.getLogger(RegioniController.class);
+@RequestMapping(value = "api/città")
+public class CittàController {
+	
+private static final Logger logger = LoggerFactory.getLogger(CittàController.class);
 	
 	@Autowired
-	RegioniService regioniService;
+	CittàService cittàService;
 
 	@GetMapping(produces = "application/json")
-	public BaseResponseDto<List<RegioniDto>> fetchAll()
+	public BaseResponseDto<List<CittàDto>> fetchAll()
 	{
-		BaseResponseDto<List<RegioniDto>> response = new BaseResponseDto<>();
+		BaseResponseDto<List<CittàDto>> response = new BaseResponseDto<>();
 		logger.info("****** Otteniamo tutte le promozioni *******");
 		
-		List<RegioniDao> regioni = regioniService.SelReg();
+		List<CittàDao> città = cittàService.SelCit();
 		
 		response.setTimestamp(new Date());
 		response.setStatus(HttpStatus.OK.value());
 		response.setMessage("SERVIZIO_ELABORATO_CORRETTAMENTE");
 		
-		if (regioni.isEmpty()) {
+		if (città.isEmpty()) {
 			response.setResponse(null);
 			return response;
 		}
 		
-		logger.info("Numero dei record:" + regioni.size());
+		logger.info("Numero dei record:" + città.size());
 		
-		RegioniDto dto = new RegioniDto();
-		dto.setRegioniData(regioni);
+		CittàDto dto = new CittàDto();
+		dto.setCittàData(città);
 		
 		response.setResponse(dto);
 		

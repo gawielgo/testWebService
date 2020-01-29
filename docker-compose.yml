@@ -14,6 +14,7 @@ services:
       context: .
     image: mysql:5.7.24
     restart: unless-stopped
+<<<<<<< HEAD
     container_name: mysqlsrv_employees
     volumes: 
       - data-volume:/var/lib/mysql
@@ -23,6 +24,17 @@ services:
     ports:
       - target: 3306
         published: 3391
+=======
+    container_name: mysqlsrv
+    volumes: 
+      - data-volume:/var/lib/mysql
+    networks: 
+        ntalphash:
+          ipv4_address: 172.20.0.2
+    ports:
+      - target: 3306
+        published: 3392
+>>>>>>> branch 'fila2' of https://github.com/gawielgo/testWebService.git
         protocol: tcp
         mode: host
     environment:

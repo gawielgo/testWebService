@@ -18,39 +18,38 @@ import it.corvallis.webservices.service.ProvinceService;
 
 @RestController
 @RequestMapping(value = "api/province")
-public class ProvinceController 
-{
-	private static final Logger logger = LoggerFactory.getLogger(ProvinceController.class);
+public class ProvinceController {
+	
+private static final Logger logger = LoggerFactory.getLogger(ProvinceController.class);
 	
 	@Autowired
-	private ProvinceService ProvinceService;
-		
+	ProvinceService provinceService;
+
 	@GetMapping(produces = "application/json")
 	public BaseResponseDto<List<ProvinceDto>> fetchAll()
 	{
 		BaseResponseDto<List<ProvinceDto>> response = new BaseResponseDto<>();
 		logger.info("****** Otteniamo tutte le promozioni *******");
 		
-		List<ProvinceDao> province = ProvinceService.SelTutti();
+		List<ProvinceDao> province = provinceService.SelProv();
 		
 		response.setTimestamp(new Date());
 		response.setStatus(HttpStatus.OK.value());
-		response.setMessage("SERVIZIO CORRETTO");
+		response.setMessage("SERVIZIO_ELABORATO_CORRETTAMENTE");
 		
-		if (province.isEmpty())
-		{
+		if (province.isEmpty()) {
 			response.setResponse(null);
 			return response;
 		}
 		
-		logger.info("Numero dei record: " + province.size());
+		logger.info("Numero dei record:" + province.size());
+		
 		ProvinceDto dto = new ProvinceDto();
 		dto.setProvinceData(province);
 		
 		response.setResponse(dto);
 		
 		return response;
-		
 	}
-
+	
 }

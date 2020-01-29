@@ -9,12 +9,11 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
-
 @Entity
-@Table(name="regioni")
+@Table(name = "regioni")
 @Data
-public class RegioniDao implements Serializable {
-	private static final long serialVersionUID = 1L;
+
+public class RegioniDao implements Serializable{
 
 	@Id
 	@Column(name = "id")

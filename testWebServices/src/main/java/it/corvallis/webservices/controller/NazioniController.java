@@ -18,39 +18,38 @@ import it.corvallis.webservices.service.NazioniService;
 
 @RestController
 @RequestMapping(value = "api/nazioni")
-public class NazioniController 
-{
-	private static final Logger logger = LoggerFactory.getLogger(NazioniController.class);
+public class NazioniController {
+
+private static final Logger logger = LoggerFactory.getLogger(NazioniController.class);
 	
 	@Autowired
-	private NazioniService NazioniService;
-		
+	NazioniService nazioniService;
+
 	@GetMapping(produces = "application/json")
 	public BaseResponseDto<List<NazioniDto>> fetchAll()
 	{
 		BaseResponseDto<List<NazioniDto>> response = new BaseResponseDto<>();
 		logger.info("****** Otteniamo tutte le promozioni *******");
 		
-		List<NazioniDao> nazioni = NazioniService.SelTutti();
+		List<NazioniDao> nazioni = nazioniService.SelNaz();
 		
 		response.setTimestamp(new Date());
 		response.setStatus(HttpStatus.OK.value());
-		response.setMessage("SERVIZIO CORRETTO");
+		response.setMessage("SERVIZIO_ELABORATO_CORRETTAMENTE");
 		
-		if (nazioni.isEmpty())
-		{
+		if (nazioni.isEmpty()) {
 			response.setResponse(null);
 			return response;
 		}
 		
-		logger.info("Numero dei record: " + nazioni.size());
+		logger.info("Numero dei record:" + nazioni.size());
+		
 		NazioniDto dto = new NazioniDto();
 		dto.setNazioniData(nazioni);
 		
 		response.setResponse(dto);
 		
 		return response;
-		
 	}
-
+	
 }

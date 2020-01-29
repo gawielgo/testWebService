@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 import it.corvallis.webservices.dao.ProvinceDao;
 
 @Repository
-public interface ProvinceRepository extends JpaRepository<ProvinceDao, Long>
-{
-	
+public interface ProvinceRepository extends JpaRepository<ProvinceDao, Long>{
+
 }

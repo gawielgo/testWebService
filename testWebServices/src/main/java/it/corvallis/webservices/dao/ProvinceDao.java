@@ -9,16 +9,15 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
-
 @Entity
-@Table(name="province")
+@Table(name = "province")
 @Data
-public class ProvinceDao implements Serializable {
-	private static final long serialVersionUID = 1L;
+
+public class ProvinceDao implements Serializable{
 
 	@Id
 	@Column(name = "id")
-	private Long id;
+	private String id;
 	
 	@Column(name = "descrizione")
 	private String descrizione;
