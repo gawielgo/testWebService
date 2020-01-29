@@ -1,13 +1,13 @@
-package it.corvallis.webservices;
+package it.its.testEmployees;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class TestEmployeesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(TestEmployeesApplication.class, args);
 	}
 
 }
