@@ -27,7 +27,7 @@ public class ArticoliController
 	@GetMapping(produces = "application/json")
 	public ResponseEntity<List<Articoli>> listAllPromo()
 	{
-		logger.info("****** Otteniamo tutte le promozioni *******");
+		logger.info("****** Otteniamo tutte le promozioni viva pippo*******");
 		
 		List<Articoli> articoli = articoliService.SelTutti();
 		
